@@ -2,14 +2,16 @@ def main():
     result = []
     a1 = int(input('Enter your first number: '))
     a2 = int(input('Enter your second number: '))
-    N = int(input('Enter the number of sequences: '))
     result.append(a1)
     result.append(a2)
-    """
-    ########################################
-    Code Your Program here
-    ########################################
-    """
+    N = int(input('Enter the number of sequences: '))
+    for num in range(2, N, 1):
+        newres = (result[num-1]+ (result[num-2]) )
+        result.append(newres)
+        print (newres)
+    print (result)
+   
+   
 
     ########################################
     # Do not delete the return statement
